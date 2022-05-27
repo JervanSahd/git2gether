@@ -1,6 +1,10 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const virtualSchema = new Schema({
+  eventId: {
+    type: String,
+    required: true,
+  },
   startDate: {
     type: Date,
     required: true,
@@ -46,9 +50,8 @@ const virtualSchema = new Schema({
     type: String,
     default: 0,
   },
-
 });
 
-const Virtual = model('Virtual', virtualSchema);
+const Virtual = model("Virtual", virtualSchema);
 
 module.exports = Virtual;

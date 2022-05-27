@@ -1,28 +1,59 @@
-const { Tech, Matchup } = require('../models');
+const { Virtual, InPerson } = require('../models');
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
+    
+      virtual: async (parent, { _id }) => {
+        const params = _id ? { _id } : {};
+        return Virtual.find(params);
     },
-    matchups: async (parent, { _id }) => {
+    inPerson: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
-      return Matchup.find(params);
+      return InPerson.find(params);
     },
   },
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
+    createInPerson: async (parent, args) => {
+      const inPerson = await InPerson.create(args);
+      return inPerson;
     },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
+    createVirtual: async (parent, args) => {
+      const virtual = await virtual.create(args);
+      return virtual;
+    },
+    // removeThought: async (parent, { thoughtId }) => {
+    //   return Thought.findByIdAndDelete({ _id: thoughtId });
+    // },
+    // const thoughtId = args.thoughtId
+    // const {thoughtId} = args
+
+    deleteInPerson: async (parent, {eventId}) => {
+      const inPerson = await InPerson.findByIdAndDelete({ _id: eventId });
+      return inPerson;
+      
+    },
+    deleteVirtual: async (parent, args) => {
+      const virtual = await virtual.delete(args);
+      return virtual;
+    },
+    updateInPerson: async (parent, args) => {
+      const inPerson = await InPerson.update(args);
+      return inPerson;
+    },
+    updateVirtual: async (parent, args) => {
+      const virtual = await virtual.update(args);
+      return virtual;
+    },
+    
+    removeComment: async (parent, { thoughtId, commentId }) => {
+      return Thought.findOneAndUpdate(
+        { _id: thoughtId },
+        { $pull: { comments: { _id: commentId } } },
         { new: true }
       );
-      return vote;
-    },
+
+
+
   },
 };
 

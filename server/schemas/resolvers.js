@@ -24,7 +24,7 @@ const resolvers = {
     //   return Thought.findByIdAndDelete({ _id: thoughtId });
     // },
     // const thoughtId = args.thoughtId ** Jung's help
-    // const {thoughtId} = args ** Jung's help
+    // const {thoughtId} = args ** Jung help
 
     deleteInPerson: async (parent, { eventId }) => {
       const inPerson = await InPerson.findByIdAndDelete({ _id: eventId });

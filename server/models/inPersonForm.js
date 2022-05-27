@@ -1,6 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const inPersonSchema = new Schema({
+  eventId:{
+    type: String,
+    required: true,
+  },
   startDate: {
     type: Date,
     required: true,

@@ -1,4 +1,4 @@
-const Tech = require('./Tech');
-const Matchup = require('./Matchup');
+const InPerson = require("./InPerson");
+const Virtual = require("./Virtual");
 
-module.exports = { Tech, Matchup };
+module.exports = { InPerson, Virtual };

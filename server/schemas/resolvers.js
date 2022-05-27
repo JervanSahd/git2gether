@@ -1,11 +1,12 @@
-const { Virtual, InPerson } = require('../models');
+
+const { Virtual, InPerson } = require("../models");
 
 const resolvers = {
   Query: {
-    
-      virtual: async (parent, { _id }) => {
-        const params = _id ? { _id } : {};
-        return Virtual.find(params);
+    virtual: async (parent, { _id }) => {
+      const params = _id ? { _id } : {};
+      return Virtual.find(params);
+
     },
     inPerson: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
@@ -24,36 +25,26 @@ const resolvers = {
     // removeThought: async (parent, { thoughtId }) => {
     //   return Thought.findByIdAndDelete({ _id: thoughtId });
     // },
-    // const thoughtId = args.thoughtId
-    // const {thoughtId} = args
 
-    deleteInPerson: async (parent, {eventId}) => {
+    // const thoughtId = args.thoughtId ** Jung's help
+    // const {thoughtId} = args ** Jung help
+
+    deleteInPerson: async (parent, { eventId }) => {
       const inPerson = await InPerson.findByIdAndDelete({ _id: eventId });
       return inPerson;
-      
     },
-    deleteVirtual: async (parent, args) => {
-      const virtual = await virtual.delete(args);
+    deleteVirtual: async (parent, { eventId }) => {
+      const virtual = await Virtual.findByIdAndDelete({ _id: eventId });
       return virtual;
     },
-    updateInPerson: async (parent, args) => {
-      const inPerson = await InPerson.update(args);
+    updateInPerson: async (parent, { eventId }) => {
+      const inPerson = await InPerson.findByIdAndUpdate({ _id: eventId });
       return inPerson;
     },
-    updateVirtual: async (parent, args) => {
-      const virtual = await virtual.update(args);
+    updateVirtual: async (parent, { eventId }) => {
+      const virtual = await Virtual.findByIdAndUpdate({ _id: eventId });
       return virtual;
     },
-    
-    removeComment: async (parent, { thoughtId, commentId }) => {
-      return Thought.findOneAndUpdate(
-        { _id: thoughtId },
-        { $pull: { comments: { _id: commentId } } },
-        { new: true }
-      );
-
-
-
   },
 };
 

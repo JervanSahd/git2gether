@@ -1,3 +1,4 @@
+
 const { Virtual, InPerson } = require("../models");
 
 const resolvers = {
@@ -5,6 +6,7 @@ const resolvers = {
     virtual: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
       return Virtual.find(params);
+
     },
     inPerson: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
@@ -23,6 +25,7 @@ const resolvers = {
     // removeThought: async (parent, { thoughtId }) => {
     //   return Thought.findByIdAndDelete({ _id: thoughtId });
     // },
+
     // const thoughtId = args.thoughtId ** Jung's help
     // const {thoughtId} = args ** Jung help
 

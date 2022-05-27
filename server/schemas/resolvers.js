@@ -1,27 +1,46 @@
-const { Tech, Matchup } = require('../models');
+const { Virtual, InPerson } = require("../models");
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
-    },
-    matchups: async (parent, { _id }) => {
+    virtual: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
-      return Matchup.find(params);
+      return Virtual.find(params);
+    },
+    inPerson: async (parent, { _id }) => {
+      const params = _id ? { _id } : {};
+      return InPerson.find(params);
     },
   },
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
+    createInPerson: async (parent, args) => {
+      const inPerson = await InPerson.create(args);
+      return inPerson;
     },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
+    createVirtual: async (parent, args) => {
+      const virtual = await virtual.create(args);
+      return virtual;
+    },
+    // removeThought: async (parent, { thoughtId }) => {
+    //   return Thought.findByIdAndDelete({ _id: thoughtId });
+    // },
+    // const thoughtId = args.thoughtId ** Jung's help
+    // const {thoughtId} = args ** Jung's help
+
+    deleteInPerson: async (parent, { eventId }) => {
+      const inPerson = await InPerson.findByIdAndDelete({ _id: eventId });
+      return inPerson;
+    },
+    deleteVirtual: async (parent, { eventId }) => {
+      const virtual = await Virtual.findByIdAndDelete({ _id: eventId });
+      return virtual;
+    },
+    updateInPerson: async (parent, { eventId }) => {
+      const inPerson = await InPerson.findByIdAndUpdate({ _id: eventId });
+      return inPerson;
+    },
+    updateVirtual: async (parent, { eventId }) => {
+      const virtual = await Virtual.findByIdAndUpdate({ _id: eventId });
+      return virtual;
     },
   },
 };

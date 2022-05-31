@@ -6,18 +6,18 @@ const virtualSchema = new Schema({
     required: true,
   },
   startDate: {
-    type: Date,
+    type: String,
     required: true,
   },
   endDate: {
-    type: Date,
+    type: String,
   },
   startTime: {
-    type: Date,
+    type: String,
     required: true,
   },
   endTime: {
-    type: Date,
+    type: String,
   },
   name: {
     type: String,

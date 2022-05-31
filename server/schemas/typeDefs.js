@@ -5,12 +5,11 @@ const typeDefs = gql`
     _id: ID!
     name: String!
     location: String!
-    startDate: Date!
-    endDate: Date
-    startTime: Date!
-    endTime: Date
+    startDate: String!
+    endDate: String
+    startTime: String!
+    endTime: String
     description: String!
-    location: String!
     plannerName: String!
     email: String!
     phone: String
@@ -21,10 +20,10 @@ const typeDefs = gql`
     _id: ID!
     name: String!
     streamLink: String!
-    startDate: Date!
-    endDate: Date
-    startTime: Date!
-    endTime: Date
+    startDate: String!
+    endDate: String
+    startTime: String!
+    endTime: String
     description: String!
     location: String!
     plannerName: String!
@@ -43,18 +42,17 @@ const typeDefs = gql`
     createInPerson(_id: ID!,
       name: String!,
       location: String!,
-      startDate: Date!,
-      startTime: Date!,
+      startDate: String!,
+      startTime: String!,
       description: String!,
-      location: String!,
       plannerName: String!,
       email: String!):InPerson
     
     createVirtual(_id: ID!,
       name: String!,
       streamLink: String!,
-      startDate: Date!,
-      startTime: Date!,
+      startDate: String!,
+      startTime: String!,
       description: String!,
       location: String!,
       plannerName: String!,

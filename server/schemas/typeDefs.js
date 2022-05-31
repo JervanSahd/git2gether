@@ -1,28 +1,72 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Tech {
+  type InPerson {
     _id: ID!
     name: String!
+    location: String!
+    startDate: Date!
+    endDate: Date
+    startTime: Date!
+    endTime: Date
+    description: String!
+    location: String!
+    plannerName: String!
+    email: String!
+    phone: String
+    linkedIn: String
   }
 
-  type Matchup {
+  type Virtual {
     _id: ID!
-    tech1: String!
-    tech2: String!
-    tech1_votes: Int
-    tech2_votes: Int
+    name: String!
+    streamLink: String!
+    startDate: Date!
+    endDate: Date
+    startTime: Date!
+    endTime: Date
+    description: String!
+    location: String!
+    plannerName: String!
+    email: String!
+    phone: String
+    linkedIn: String
+    
   }
 
   type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
+    inPerson: [InPerson]
+    virtual: [Virtual]
   }
 
   type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
+    createInPerson(_id: ID!,
+      name: String!,
+      location: String!,
+      startDate: Date!,
+      startTime: Date!,
+      description: String!,
+      location: String!,
+      plannerName: String!,
+      email: String!):InPerson
+    
+    createVirtual(_id: ID!,
+      name: String!,
+      streamLink: String!,
+      startDate: Date!,
+      startTime: Date!,
+      description: String!,
+      location: String!,
+      plannerName: String!,
+      email: String!): Virtual
+
+    deleteInPerson (_id: ID!):InPerson
+    deleteVirtual (_id: ID!):Virtual
+
+    updateInPerson (_id: ID!):InPerson
+    updateVirtual (_id: ID!):Virtual
   }
+  
 `;
 
 module.exports = typeDefs;

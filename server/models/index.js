@@ -1,4 +1,4 @@
-const InPerson = require("./InPerson");
-const Virtual = require("./Virtual");
+const InPerson = require("./inPersonForm");
+const Virtual = require("./virtualForm");
 
 module.exports = { InPerson, Virtual };

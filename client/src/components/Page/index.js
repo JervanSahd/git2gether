@@ -9,8 +9,6 @@ function Page({ currentPage }) {
     switch (currentPage.name) {
       case "about":
         return <About />;
-      case "contact":
-        return <Contact />;
       case "events":
         return <Events />;
       case "page":

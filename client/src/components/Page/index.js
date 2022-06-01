@@ -2,7 +2,6 @@ import React from "react";
 import PageContent from "../PageContent";
 import About from "../About";
 import Events from "../Events";
-import Contact from "../Contact";
 // import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Page({ currentPage }) {

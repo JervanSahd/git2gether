@@ -1,49 +1,72 @@
 import React, { useState } from 'react';
-import Project from "./Events";
+import Event from "./Event Cards/allEvents";
 
-function Portfolio() {
+function EventCards() {
 
   // Replace links with deployed projects and GitHub repos
-  const [projects] = useState([
+  const [events] = useState([
     {
-      name: 'surf-report',
-      description: 'MERN Stack',
-      link: "https://github.com",
-      repo: "https://github.com"
+      name: 'recent grad network and hangout',
+      description: `Congrats! You finished bootcamp. So join us at Barley's for a chance to 
+        network with other bootcamp grads in the area. See you there!`,
+      startDate: 'Wednesday, June 01',
+      startTime: '4:00pm',
+      endTime: '6:00pm',
+      location: "Barley's Taproom & Pizzeria",
+      plannerName: 'Autumn Fields',
+      email: 'autumnf12@gmail.com',
+      phone: '5555555555',
+      linkedIn: 'https://www.linkedin.com/in/autumn-fields-2021/'
     },
     {
-      name: 'pastel-puzzels',
-      description: 'MERN Stack',
-      link: "https://github.com",
-      repo: "https://github.com"
+      name: 'Couch Networking',
+      description: `Leaving the house is hard. But chilling on the couch is easy. Let's
+        get together and network on a zoom call! `,
+      startDate: 'Wednesday, June 01',
+      startTime: '7:00pm',
+      endTime: '',
+      streamLink: "https://hangouts.google.com/",
+      plannerName: 'Autumn Fields',
+      email: 'autumnf12@gmail.com',
+      phone: '5555555555',
+      linkedIn: 'https://www.linkedin.com/in/autumn-fields-2021/'
     },
     {
-      name: 'run-buddy',
-      description: 'HTML/CSS',
-      link: "https://github.com",
-      repo: "https://github.com"
+      name: 'recent grad network and hangout',
+      description: `Congrats! You finished bootcamp. So join us at Barley's for a chance to 
+        network with other bootcamp grads in the area. See you there!`,
+      startDate: 'Wednesday, June 01',
+      startTime: '4:00pm',
+      endTime: '6:00pm',
+      location: "Barley's Taproom & Pizzeria",
+      plannerName: 'Autumn Fields',
+      email: 'autumnf12@gmail.com',
+      phone: '5555555555',
+      linkedIn: 'https://www.linkedin.com/in/autumn-fields-2021/'
     },
     {
-      name: 'led-wall',
-      description: 'Node/IoT',
-      link: "https://github.com",
-      repo: "https://github.com"
-    },
-    {
-      name: 'calculator',
-      description: 'React/JavaScript/CSS',
-      link: "https://github.com",
-      repo: "https://github.com"
-    },
+      name: 'recent grad network and hangout',
+      description: `Congrats! You finished bootcamp. So join us at Barley's for a chance to 
+        network with other bootcamp grads in the area. See you there!`,
+      startDate: 'Wednesday, June 01',
+      startTime: '4:00pm',
+      endTime: '6:00pm',
+      location: "Barley's Taproom & Pizzeria",
+      plannerName: 'Autumn Fields',
+      email: 'autumnf12@gmail.com',
+      phone: '5555555555',
+      linkedIn: 'https://www.linkedin.com/in/autumn-fields-2021/'
+    }
+
   ]);
 
   return (
     <div>
-      <div className="flex-row">
-        {projects.map((project, idx) => (
-          <Project
-            project={project}
-            key={"project" + idx}
+      <div id="eventCards">
+        {events.map((event, idx) => (
+          <Event
+            event={event}
+            key={"event" + idx}
           />
         ))}
       </div>
@@ -51,4 +74,4 @@ function Portfolio() {
   );
 };
 
-export default Portfolio;
+export default EventCards;

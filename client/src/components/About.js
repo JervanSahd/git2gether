@@ -2,16 +2,18 @@ import React from 'react';
 
 function About() {
   return (
-    <section className="my-5">
-      <div className="my-2">
-        <div className="profile-img my-5">
-        <i className="fas fa-user-circle" style={{ fontSize: "96px" }}></i>
-        </div>
+    <section>
+      <div>
+        <h2>About</h2>
+        <h3><i>Git2gether exists to connect, equip, and empower coding bootcamp graduates.</i></h3>
         <p>
-        Helvetica put a bird on it church-key Blue Bottle banjo bespoke brunch Etsy authentic Marfa quinoa typewriter plaid direct trade small batch wayfarers bicycle rights cliche craft beer gastropub single-origin coffee Godard Carles you probably haven't heard of them irony pickled kitsch synth sriracha gentrify literally heirloom blog Truffaut paleo scenester
+          Coding bootcamps are a viable career path for aspiring developers.  Graduates of these fast-paced, intensive courses become proficient in variety of essential technologies and skills to help the graduate become employer-ready.
         </p>
         <p>
-        Echo Park sriracha Pinterest vegan biodiesel 90's irony iPhone Kickstarter Carles crucifix kitsch narwhal dreamcatcher pickled trust fund selvage art party letterpress Tumblr post-ironic kogi Thundercats Tonx Brooklyn Pitchfork Odd Future authentic normcore freegan leggings Schlitz chambray organic tousled retro fap squid street art church-key fashion axe Wes Anderson bespoke whatever gentrify banh mi you probably haven't heard of them American Apparel next level pug ugh.
+          Upon graduation, many of these very developers are left wondering, “Now what?”  Finding work in this sector proves to be a challenge for many graduates.  Though, as many as 79% of bootcamp graduates say that they landed a job within six months of graduation.
+        </p>
+        <p>
+          Opportunity is out there, and we want to help developers to find it.  We aim to accomplish this by providing a digital platform to a&#41; locate b&#41; &/or create networking events to meet other bootcamp graduates.
         </p>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Event from "./Event Cards/allEvents";
+import Event from "./EventCards/allEvents";
 
 function EventCards() {
 

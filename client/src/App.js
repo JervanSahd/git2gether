@@ -2,18 +2,14 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Page from "./components/Page";
-import Footer from "./components/Footer";
+
 
 function App() {
   const [pages] = useState([
-    {
-      name: "about me"
-    },
-    { name: "portfolio" },
-    { name: "contact" },
-    {
-      name: "resume"
-    }
+    {name: "about"},
+    {name: "event" },
+    {name: "contact" },
+   
   ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
@@ -30,7 +26,7 @@ function App() {
       <main>
         <Page currentPage={currentPage}></Page>
       </main>
-      <Footer />
+      
     </div>
   );
 }

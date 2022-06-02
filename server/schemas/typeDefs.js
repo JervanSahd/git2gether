@@ -28,7 +28,7 @@ const typeDefs = gql`
     description: String!
     location: String!
     plannerName: String!
-    email: String!
+    email: String
     phone: String
     linkedIn: String
     

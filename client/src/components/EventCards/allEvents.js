@@ -7,7 +7,7 @@ function Event({ event }) {
         location, streamLink, plannerName, email, phone, linkedIn } = event;
 
     return (
-        <div id='eventInfo' key={name}>
+        <div id='eventInfo' key={eventId}>
             <div id='eventDate'>
                 <h4>{startDate}</h4>
                 <h4>{startTime} - {endTime}</h4>

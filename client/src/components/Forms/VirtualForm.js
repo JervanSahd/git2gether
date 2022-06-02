@@ -10,7 +10,7 @@ import { createVirtual } from '../../utils/mutations';
 const VirtualForm = () => {
   const [formState, setFormState] = useState({
     name: '',
-    location: '',
+    streamLink: '',
     startDate: '',
     endDate: '',
     description: '',
@@ -45,7 +45,7 @@ const VirtualForm = () => {
 
       setFormState({
         name: '',
-        location: '',
+        streamLink: '',
         startDate: '',
         endDate: '',
         description: '',
@@ -64,7 +64,7 @@ const VirtualForm = () => {
 
     if (name === 'name') {
       setFormState({ ...formState, [name]: value });
-    } else if (name === 'location') {
+    } else if (name === 'streamLink') {
       setFormState({ ...formState, [name]: value });
     } else if (name === 'startDate') {
       setFormState({ ...formState, [name]: value });
@@ -107,8 +107,8 @@ const VirtualForm = () => {
         </div>
         <div className="col-12 col-lg-9">
           <input
-            name="location"
-            placeholder="Location address*"
+            name="streamLink"
+            placeholder="Virtual Stream Link*"
             value={formState.location}
             className="form-input w-100"
             onChange={handleChange}

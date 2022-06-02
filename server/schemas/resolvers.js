@@ -3,23 +3,34 @@ const { Virtual, InPerson } = require("../models");
 
 const resolvers = {
   Query: {
-    virtual: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Virtual.find(params);
-
+    // virtual: async (parent, { _id }) => {
+    //   const params = _id ? { _id } : {};
+    //   return Virtual.find(params);
+    // },
+    virtual: async (parent, { eventId }) => {
+      return Virtual.findOne({ _id: eventId });
     },
-    inPerson: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return InPerson.find(params);
+    // inPerson: async (parent, { _id }) => {
+    //   const params = _id ? { _id } : {};
+    //   return InPerson.find(params);
+    // },
+    inPerson: async (parent, { eventId }) => {
+      return InPerson.findOne({ _id: eventId });
+    },
+    virtualAll: async () => {
+      return Virtual.find();
+    },
+    InPersonAll: async () => {
+      return InPerson.find();
     },
   },
   Mutation: {
-    createInPerson: async (parent, args) => {
-      const inPerson = await InPerson.create(args);
+    createInPerson: async (parent, { name, location, startDate, startTime, description, plannerName, email }) => {
+      const inPerson = await InPerson.create({ name, location, startDate, startTime, description, plannerName, email });
       return inPerson;
     },
-    createVirtual: async (parent, args) => {
-      const virtual = await virtual.create(args);
+    createVirtual: async (parent, { name, streamLink, startDate, startTime, description, plannerName, email }) => {
+      const virtual = await virtual.create({ name, streamLink, startDate, startTime, description, plannerName, email });
       return virtual;
     },
     // removeThought: async (parent, { thoughtId }) => {
@@ -30,19 +41,19 @@ const resolvers = {
     // const {thoughtId} = args ** Jung help
 
     deleteInPerson: async (parent, { eventId }) => {
-      const inPerson = await InPerson.findByIdAndDelete({ _id: eventId });
+      const inPerson = await InPerson.findOneAndDelete({ _id: eventId });
       return inPerson;
     },
     deleteVirtual: async (parent, { eventId }) => {
-      const virtual = await Virtual.findByIdAndDelete({ _id: eventId });
+      const virtual = await Virtual.findOneAndDelete({ _id: eventId });
       return virtual;
     },
     updateInPerson: async (parent, { eventId }) => {
-      const inPerson = await InPerson.findByIdAndUpdate({ _id: eventId });
+      const inPerson = await InPerson.findOneAndUpdate({ _id: eventId });
       return inPerson;
     },
     updateVirtual: async (parent, { eventId }) => {
-      const virtual = await Virtual.findByIdAndUpdate({ _id: eventId });
+      const virtual = await Virtual.findOneAndUpdate({ _id: eventId });
       return virtual;
     },
   },

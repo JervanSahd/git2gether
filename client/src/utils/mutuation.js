@@ -20,7 +20,7 @@ export const createInPerson = gql`
 `;
 
 export const createVirtual = gql`
-  mutation createInPerson($name: String!, $streamLink: String!, $startDate: String!, $startTime: String!, $description: String!, $plannerName: String!, $email: String!) {
+  mutation createVirtual($name: String!, $streamLink: String!, $startDate: String!, $startTime: String!, $description: String!, $plannerName: String!, $email: String!) {
     createInPerson(name: $name, streamLink: $streamLink, startDate: $startDate, startTime: $startTime, description: $description, plannerName: $plannerName, email: $email) {
       _id
       name
@@ -59,7 +59,7 @@ export const deleteInPerson = gql`
 `;
 
 export const deleteVirtual = gql`
-  mutation createInPerson($name: String!, $streamLink: String!, $startDate: String!, $startTime: String!, $description: String!, $plannerName: String!, $email: String!) {
+  mutation createVirtual($name: String!, $streamLink: String!, $startDate: String!, $startTime: String!, $description: String!, $plannerName: String!, $email: String!) {
     createInPerson(name: $name, streamLink: $streamLink, startDate: $startDate, startTime: $startTime, description: $description, plannerName: $plannerName, email: $email) {
       _id
       name
@@ -98,7 +98,7 @@ export const updateInPerson = gql`
 `;
 
 export const updateVirtual = gql`
-  mutation createInPerson($name: String!, $streamLink: String!, $startDate: String!, $startTime: String!, $description: String!, $plannerName: String!, $email: String!) {
+  mutation createVirtual($name: String!, $streamLink: String!, $startDate: String!, $startTime: String!, $description: String!, $plannerName: String!, $email: String!) {
     createInPerson(name: $name, streamLink: $streamLink, startDate: $startDate, startTime: $startTime, description: $description, plannerName: $plannerName, email: $email) {
       _id
       name

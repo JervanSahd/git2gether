@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID!
     name: String!
     location: String!
-    startDate: String!
+    startDate: String! 
     endDate: String
     startTime: String!
     endTime: String

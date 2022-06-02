@@ -1,23 +1,23 @@
 const { Schema, model } = require('mongoose');
 
 const inPersonSchema = new Schema({
-  eventId:{
+  // eventId:{
+  //   type: String,
+  //   required: true,
+  // },
+  startDate: {
     type: String,
     required: true,
   },
-  startDate: {
-    type: Date,
-    required: true,
-  },
   endDate: {
-    type: Date,
+    type: String,
   },
   startTime: {
-    type: Date,
+    type: String,
     required: true,
   },
   endTime: {
-    type: Date,
+    type: String,
   },
   name: {
     type: String,

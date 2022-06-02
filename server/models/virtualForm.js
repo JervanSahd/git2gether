@@ -1,10 +1,10 @@
 const { Schema, model } = require("mongoose");
 
 const virtualSchema = new Schema({
-  eventId: {
-    type: String,
-    required: true,
-  },
+  // eventId: {
+  //   type: String,
+  //   required: true,
+  // },
   startDate: {
     type: String,
     required: true,

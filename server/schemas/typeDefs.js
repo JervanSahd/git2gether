@@ -30,16 +30,17 @@ const typeDefs = gql`
     email: String!
     phone: String
     linkedIn: String
-    
   }
 
   type Query {
-    inPerson: [InPerson]
-    virtual: [Virtual]
+    inPerson(eventId: ID!): InPerson
+    virtual(eventId: ID!): Virtual
+    InPersonAll: [InPerson]!
+    virtualAll: [Virtual]!
   }
 
   type Mutation {
-    createInPerson(_id: ID!,
+    createInPerson(
       name: String!,
       location: String!,
       startDate: String!,
@@ -48,7 +49,7 @@ const typeDefs = gql`
       plannerName: String!,
       email: String!):InPerson
     
-    createVirtual(_id: ID!,
+    createVirtual(
       name: String!,
       streamLink: String!,
       startDate: String!,
@@ -58,11 +59,11 @@ const typeDefs = gql`
       plannerName: String!,
       email: String!): Virtual
 
-    deleteInPerson (_id: ID!):InPerson
-    deleteVirtual (_id: ID!):Virtual
+    deleteInPerson (eventId: ID!):InPerson
+    deleteVirtual (eventId: ID!):Virtual
 
-    updateInPerson (_id: ID!):InPerson
-    updateVirtual (_id: ID!):Virtual
+    updateInPerson (eventId: ID!):InPerson
+    updateVirtual (eventId: ID!):Virtual
   }
   
 `;

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 // import { useQuery } from '@apollo/client';
 
-import { GET_inPerson } from '../../utils/queries';
-import { createInPerson } from '../../utils/mutations';
+import { QUERY_INPERSON } from '../../utils/queries';
+import { ADD_INPERSON } from '../../utils/mutuation';
 // import { deleteInPerson } from '../../utils/mutations';
 // import { updateInPerson } from '../../utils/mutations';
 
@@ -13,6 +13,8 @@ const InPersonForm = () => {
     location: '',
     startDate: '',
     endDate: '',
+    startTime: '',
+    endTime: '',
     description: '',
     plannerName: '',
     email: '',
@@ -20,14 +22,14 @@ const InPersonForm = () => {
     linkedIn: '',
   });
 
-  const [formIP,{error}] = useMutation(createInPerson, {
-    update(cache, { data: { formIP } }) {
+  const [createInPerson, { error }] = useMutation(ADD_INPERSON, {
+    update(cache, { data: { createInPerson } }) {
       try {
-        const { readIP } = cache.readQuery({ query: GET_inPerson });
+        const { InPersonAll } = cache.readQuery({ query: QUERY_INPERSON });
 
         cache.writeQuery({
-          query: GET_inPerson,
-          data: { readIP: [formIP, ...readIP] },
+          query: QUERY_INPERSON,
+          data: { readIP: [createInPerson, ...InPersonAll] },
         });
       } catch (e) {
         console.error(e);
@@ -39,7 +41,7 @@ const InPersonForm = () => {
     event.preventDefault();
 
     try {
-      const { data } = await formIP({
+      const { data } = await createInPerson({
         variables: { ...formState },
       });
 
@@ -48,6 +50,8 @@ const InPersonForm = () => {
         location: '',
         startDate: '',
         endDate: '',
+        startTime: '',
+        endTime: '',
         description: '',
         plannerName: '',
         email: '',
@@ -136,7 +140,7 @@ const InPersonForm = () => {
           <input
             name="startTime"
             placeholder="Start Time*"
-            value={formState.location}
+            value={formState.startTime}
             className="form-input w-100"
             onChange={handleChange}
           />

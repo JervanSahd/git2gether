@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const createInPerson = gql`
+export const ADD_INPERSON = gql`
   mutation createInPerson($name: String!, $location: String!, $startDate: String!, $startTime: String!, $description: String!, $plannerName: String!, $email: String!) {
     createInPerson(name: $name, location: $location, startDate: $startDate, startTime: $startTime, description: $description, plannerName: $plannerName, email: $email) {
       _id
@@ -19,9 +19,9 @@ export const createInPerson = gql`
   }
 `;
 
-export const createVirtual = gql`
+export const ADD_VIRTUAL = gql`
   mutation createVirtual($name: String!, $streamLink: String!, $startDate: String!, $startTime: String!, $description: String!, $plannerName: String!, $email: String!) {
-    createInPerson(name: $name, streamLink: $streamLink, startDate: $startDate, startTime: $startTime, description: $description, plannerName: $plannerName, email: $email) {
+    createVirtual(name: $name, streamLink: $streamLink, startDate: $startDate, startTime: $startTime, description: $description, plannerName: $plannerName, email: $email) {
       _id
       name
       streamLink

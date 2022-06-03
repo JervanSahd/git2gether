@@ -1,15 +1,18 @@
 //import React, { useState } from 'react';
 import React from 'react';
 import Event from "./EventCards/allEvents";
-//import EventDetails from './EventCards/eventDetails';
+import EventDetails from './EventCards/eventDetails';
 
-import { QUERY_INPERSON } from '../utils/queries'
 import { useQuery } from '@apollo/client';
+import { QUERY_INPERSON } from '../utils/queries';
+
 
 function EventCards() {
   const { data } = useQuery(QUERY_INPERSON);
   const events = data?.InPersonAll || [];
 
+  // const { dataSingle } = useQuery(QUERY_SINGLE_INPERSON);
+  // const singleEvent = dataSingle?.inPerson || [];
 
   // const [events] = useState([
   //   {
@@ -70,6 +73,10 @@ function EventCards() {
 
   return (
     <div>
+      {/* <div id="detailedEventCard">
+        <EventDetails />
+      </div> */}
+
       <div id="eventCards">
         {events.map((event, idx) => (
           <Event

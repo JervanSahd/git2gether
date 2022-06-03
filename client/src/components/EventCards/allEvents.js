@@ -2,26 +2,21 @@ import React from "react";
 import { removeHyphensAndCapitalize } from "../../utils/helpers";
 import Map from "../Map/Map";
 
+
 function Event({ event }) {
   // const { eventId, startDate, startTime, endTime, name, description,} = event;
   // SS delete unused variables
-  const {
-    eventId,
-    startDate,
-    endDate,
-    startTime,
-    endTime,
-    name,
-    description,
-    location,
-    streamLink,
-    plannerName,
-    email,
-    phone,
-    linkedIn,
-  } = event;
+  const { _id, startDate, endDate, startTime, endTime, name, description,
+    location, streamLink, plannerName, email, phone, linkedIn, } = event;
+
+
+  console.log({ _id });
+  console.log({ location });
+
+
+
   return (
-    <div id="eventInfo" key={eventId}>
+    <div id="eventInfo" key={_id}>
       <div id="eventDate">
         <h4>{startDate}</h4>
         <h4>
@@ -36,20 +31,14 @@ function Event({ event }) {
         <p>{description}</p>
       </div>
 
-      <div>
-        {endDate}
-        {location}
-        {streamLink}
-        {plannerName}
-        {email}
-        {phone}
-        {linkedIn}
+
+      <div id="maps">
+        <Map
+
+        />
       </div>
-      <div>
-        {" "}
-        <Map />
-      </div>
-    </div>
+
+    </div >
   );
 }
 

@@ -13,7 +13,7 @@ function App() {
   const [pages] = useState([
     { name: "about" },
     { name: "event" },
-    { name: "contact" },
+    { name: "create an event" },
 
   ]);
 

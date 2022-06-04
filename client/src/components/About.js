@@ -17,7 +17,7 @@ const Email = <FontAwesomeIcon icon={faEnvelopeSquare} />
 
 function About() {
   return (
-    <section>
+    <section class="about">
       <div class="about-section">
         <h2>Git2gether exists to connect, equip, and empower coding bootcamp graduates.</h2>
         <p>
@@ -57,9 +57,9 @@ function About() {
             <div class="team-member-info-box">
               <h3 id="nameplate">Maria Brown</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/maria-quintanilla-brown/" target="_blank">{LinkedIn}</a>
-                <a href="https://github.com/MariaEBrown" target="_blank">{Github}</a>
-                <a href="mailto:mariabrown0908@gmail.com" target="_blank">{Email}</a>
+                <a href="https://www.linkedin.com/in/maria-quintanilla-brown/" id="icons" target="_blank">{LinkedIn}</a>
+                <a href="https://github.com/MariaEBrown" target="_blank" id="icons">{Github}</a>
+                <a href="mailto:mariabrown0908@gmail.com" target="_blank" id="icons">{Email}</a>
               </div>
             </div>
           </div>
@@ -72,9 +72,9 @@ function About() {
             <div class="team-member-info-box">
               <h3 id="nameplate">Autumn Fields</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/autumn-fields-2021/" target="_blank">{LinkedIn}</a>
-                <a href="https://github.com/autumnlf" target="_blank">{Github}</a>
-                <a href="mailto:autumnF12@gmail.com" target="_blank">{Email}</a>
+                <a href="https://www.linkedin.com/in/autumn-fields-2021/" target="_blank" id="icons">{LinkedIn}</a>
+                <a href="https://github.com/autumnlf" target="_blank"  id="icons" >{Github}</a>
+                <a href="mailto:autumnF12@gmail.com" target="_blank"  id="icons" >{Email}</a>
               </div>
             </div>
           </div>
@@ -87,9 +87,9 @@ function About() {
             <div class="team-member-info-box">
               <h3 id="nameplate">Barry Gilreath</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/barry-gilreath-iii/" target="_blank">{LinkedIn}</a>
-                <a href="http://www.github.com/barrygilreath3" target="_blank">{Github}</a>
-                <a href="mailto:barrygilreath3@gmail.com" target="_blank">{Email}</a>
+                <a href="https://www.linkedin.com/in/barry-gilreath-iii/" target="_blank"  id="icons" >{LinkedIn}</a>
+                <a href="http://www.github.com/barrygilreath3" target="_blank"  id="icons" >{Github}</a>
+                <a href="mailto:barrygilreath3@gmail.com" target="_blank"  id="icons" >{Email}</a>
               </div>
             </div>
           </div>
@@ -102,9 +102,9 @@ function About() {
             <div class="team-member-info-box">
               <h3 id="nameplate">Steve Snavely</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/stevesnavely/" target="_blank">{LinkedIn}</a>
-                <a href="https://github.com/JervanSahd/" target="_blank">{Github}</a>
-                <a href="mailto:info@stevesnavely.com" target="_blank">{Email}</a>
+                <a href="https://www.linkedin.com/in/stevesnavely/" target="_blank"  id="icons" >{LinkedIn}</a>
+                <a href="https://github.com/JervanSahd/" target="_blank"  id="icons" >{Github}</a>
+                <a href="mailto:info@stevesnavely.com" target="_blank"  id="icons" >{Email}</a>
               </div>
             </div>
           </div>
@@ -117,9 +117,9 @@ function About() {
             <div class="team-member-info-box">
               <h3 id="nameplate">Seamona Stewart</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/seamonajassystewart-aba25320/" target="_blank">{LinkedIn}</a>
-                <a href="https://github.com/Jaspertena" target="_blank">{Github}</a>
-                <a href="mailto:Jaspertena@aol.com" target="_blank">{Email}</a>
+                <a href="https://www.linkedin.com/in/seamonajassystewart-aba25320/" target="_blank"  id="icons">{LinkedIn}</a>
+                <a href="https://github.com/Jaspertena" target="_blank"  id="icons">{Github}</a>
+                <a href="mailto:Jaspertena@aol.com" target="_blank"  id="icons">{Email}</a>
               </div>
             </div>
           </div>

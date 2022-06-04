@@ -1,7 +1,7 @@
 //import React, { useState } from 'react';
 import React from 'react';
 import Event from "./EventCards/allEvents";
-import EventDetails from './EventCards/eventDetails';
+// import EventDetails from './EventCards/eventDetails';
 
 import { useQuery } from '@apollo/client';
 import { QUERY_INPERSON } from '../utils/queries';

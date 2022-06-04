@@ -3,7 +3,17 @@ import Maria from '../assets/team/maria.jpg';
 import Autumn from '../assets/team/autumn.jpg';
 import Barry from '../assets/team/barry.jpg';
 import Steve from '../assets/team/steve.jpeg';
-import Seamona from '../assets/team/seamona.jpg'
+import Seamona from '../assets/team/seamona.jpg';
+
+
+// importing icons for contact links
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+const LinkedIn = <FontAwesomeIcon icon={faLinkedin} />
+const Github = <FontAwesomeIcon icon={faGithubSquare} />
+const Email = <FontAwesomeIcon icon={faEnvelopeSquare} />
 
 function About() {
   return (
@@ -29,7 +39,7 @@ function About() {
           Git2gether is a student project completed as part of a full-stack coding bootcamp.
         </p>
         <p>
-          This full-stack MERN application includes the following technologies: React JS, GraphQL, Apollo Server-Express, Apollo/Client, Mongoose, Express, and React-Google-Maps (NPM Package).
+          This full-stack MERN application includes the following technologies: React JS, GraphQL, Apollo Server-Express, Apollo/Client, Mongoose, Express, React-Google-Maps (NPM Package), and font-awesome icons (NPM Package).
         </p>
       </div>
 
@@ -42,19 +52,14 @@ function About() {
           {/* Maria */}
           <div class="team-member-box">
             <div class="team-member-picture-box">
-              <img src={Maria}/>
+              <img src={Maria} />
             </div>
             <div class="team-member-info-box">
               <h3 id="nameplate">Maria Brown</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/maria-quintanilla-brown/" target="_blank">Linkedin</a>
-                <a href="https://github.com/MariaEBrown" target="_blank">GitHub</a>
-                <a href="mailto:mariabrown0908@gmail.com" target="_blank">Contact</a>
-
-                {/* Below is the code for the icons.  I was having trouble getting these icons to still appear on the screen when wrapping the <i> elements with an <a> element */}
-                {/* <i class="fa-brands fa-linkedin fa-xl"></i> */}
-                {/* <i class="fa-brands fa-github-square fa-xl"></i> */}
-                {/* <i class="fa-solid fa-square-envelope fa-xl"></i> */}
+                <a href="https://www.linkedin.com/in/maria-quintanilla-brown/" target="_blank">{LinkedIn}</a>
+                <a href="https://github.com/MariaEBrown" target="_blank">{Github}</a>
+                <a href="mailto:mariabrown0908@gmail.com" target="_blank">{Email}</a>
               </div>
             </div>
           </div>
@@ -62,19 +67,14 @@ function About() {
           {/* Autumn */}
           <div class="team-member-box">
             <div class="team-member-picture-box">
-              <img src={Autumn}/>
+              <img src={Autumn} />
             </div>
             <div class="team-member-info-box">
               <h3 id="nameplate">Autumn Fields</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/autumn-fields-2021/" target="_blank">Linkedin</a>
-                <a href="https://github.com/autumnlf" target="_blank">GitHub</a>
-                <a href="mailto:autumnF12@gmail.com" target="_blank">Contact</a>
-
-                {/* Below is the code for the icons.  I was having trouble getting these icons to still appear on the screen when wrapping the <i> elements with an <a> element */}
-                {/* <i class="fa-brands fa-linkedin fa-xl"></i> */}
-                {/* <i class="fa-brands fa-github-square fa-xl"></i> */}
-                {/* <i class="fa-solid fa-square-envelope fa-xl"></i> */}
+                <a href="https://www.linkedin.com/in/autumn-fields-2021/" target="_blank">{LinkedIn}</a>
+                <a href="https://github.com/autumnlf" target="_blank">{Github}</a>
+                <a href="mailto:autumnF12@gmail.com" target="_blank">{Email}</a>
               </div>
             </div>
           </div>
@@ -82,19 +82,14 @@ function About() {
           {/* Barry */}
           <div class="team-member-box">
             <div class="team-member-picture-box">
-              <img src={Barry}/>
+              <img src={Barry} />
             </div>
             <div class="team-member-info-box">
               <h3 id="nameplate">Barry Gilreath</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/barry-gilreath-iii/" target="_blank">Linkedin</a>
-                <a href="http://www.github.com/barrygilreath3" target="_blank">GitHub</a>
-                <a href="mailto:barrygilreath3@gmail.com" target="_blank">Contact</a>
-
-                {/* Below is the code for the icons.  I was having trouble getting these icons to still appear on the screen when wrapping the <i> elements with an <a> element */}
-                {/* <i class="fa-brands fa-linkedin fa-xl"></i> */}
-                {/* <i class="fa-brands fa-github-square fa-xl"></i> */}
-                {/* <i class="fa-solid fa-square-envelope fa-xl"></i> */}
+                <a href="https://www.linkedin.com/in/barry-gilreath-iii/" target="_blank">{LinkedIn}</a>
+                <a href="http://www.github.com/barrygilreath3" target="_blank">{Github}</a>
+                <a href="mailto:barrygilreath3@gmail.com" target="_blank">{Email}</a>
               </div>
             </div>
           </div>
@@ -102,19 +97,14 @@ function About() {
           {/* Steve */}
           <div class="team-member-box">
             <div class="team-member-picture-box">
-              <img src={Steve}/>
+              <img src={Steve} />
             </div>
             <div class="team-member-info-box">
               <h3 id="nameplate">Steve Snavely</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/stevesnavely/" target="_blank">Linkedin</a>
-                <a href="https://github.com/JervanSahd/" target="_blank">GitHub</a>
-                <a href="mailto:info@stevesnavely.com" target="_blank">Contact</a>
-
-                {/* Below is the code for the icons.  I was having trouble getting these icons to still appear on the screen when wrapping the <i> elements with an <a> element */}
-                {/* <i class="fa-brands fa-linkedin fa-xl"></i> */}
-                {/* <i class="fa-brands fa-github-square fa-xl"></i> */}
-                {/* <i class="fa-solid fa-square-envelope fa-xl"></i> */}
+                <a href="https://www.linkedin.com/in/stevesnavely/" target="_blank">{LinkedIn}</a>
+                <a href="https://github.com/JervanSahd/" target="_blank">{Github}</a>
+                <a href="mailto:info@stevesnavely.com" target="_blank">{Email}</a>
               </div>
             </div>
           </div>
@@ -122,26 +112,21 @@ function About() {
           {/* Seamona */}
           <div class="team-member-box">
             <div class="team-member-picture-box">
-              <img src={Seamona}/>
+              <img src={Seamona} />
             </div>
             <div class="team-member-info-box">
               <h3 id="nameplate">Seamona Stewart</h3>
               <div class="icon-box">
-                <a href="https://www.linkedin.com/in/seamonajassystewart-aba25320/" target="_blank">Linkedin</a>
-                <a href="https://github.com/Jaspertena" target="_blank">GitHub</a>
-                <a href="mailto:Jaspertena@aol.com" target="_blank">Contact</a>
-
-                {/* Below is the code for the icons.  I was having trouble getting these icons to still appear on the screen when wrapping the <i> elements with an <a> element */}
-                {/* <i class="fa-brands fa-linkedin fa-xl"></i> */}
-                {/* <i class="fa-brands fa-github-square fa-xl"></i> */}
-                {/* <i class="fa-solid fa-square-envelope fa-xl"></i> */}
+                <a href="https://www.linkedin.com/in/seamonajassystewart-aba25320/" target="_blank">{LinkedIn}</a>
+                <a href="https://github.com/Jaspertena" target="_blank">{Github}</a>
+                <a href="mailto:Jaspertena@aol.com" target="_blank">{Email}</a>
               </div>
             </div>
           </div>
 
         </div>
 
-        
+
       </div>
     </section>
   );

@@ -11,9 +11,9 @@ const client = new ApolloClient({
 
 function App() {
   const [pages] = useState([
-    { name: "about" },
-    { name: "event" },
-    { name: "create an event" },
+    { name: "Find Events" },
+    { name: "Create an Event" },
+    { name: "About G2g" },
 
   ]);
 

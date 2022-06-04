@@ -8,11 +8,11 @@ import InPersonForm from "../Forms/inPersonForm";
 function Page({ currentPage }) {
   const renderPage = () => {
     switch (currentPage.name) {
-      case "about":
+      case "About G2g":
         return <About />;
-      case "events":
+      case "Find Events":
         return <Events />;
-      case "create an event":
+      case "Create an Event":
         return <InPersonForm />;
       case "page":
         return <PageContent />;

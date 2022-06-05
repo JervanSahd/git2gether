@@ -61,6 +61,8 @@ function Event({ event }) {
       const { lat, lng } = response.results[0].geometry.location;
       console.log(lat, lng);
       const center = {
+      //console.log(lat, lng);
+      return const center = {
         lat: lat,
         lng: lng,
       };
@@ -77,6 +79,16 @@ function Event({ event }) {
     lat: 33.753746,
     lng: -84.38633,
   };
+
+    }
+  );
+
+
+  // const center = {
+  //   lat: 33.753746,
+  //   lng: -84.38633,
+  // };
+
 
 
   const { isLoaded, loadError } = useLoadScript({

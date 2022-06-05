@@ -76,7 +76,7 @@ function Event({ event }) {
           <div id='iconBox'>
             <a id='icons' href={emailAddress} target="_blank">{Email}</a>
             <a id='icons' href={linkedIn} target="_blank">{Linkedin}</a>
-            <a id='icons' href={emailAddress} target="_blank">{Phone}</a>
+            <a id='icons' href={phone} target="_blank">{Phone}</a>
           </div>
         </div>
       </div>

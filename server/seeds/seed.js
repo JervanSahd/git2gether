@@ -16,7 +16,8 @@ const seedInPersonForm = [
   {
     plannerName: 'Mark Jones',
     name: 'Coding Bootcamp Meetup',
-    location: 'OZ Pizza',
+    location: '2805 Main St, East Point, GA 30344',
+    // locationName: 'OZ Pizza',
     startDate: 'Tuesday, June 21',
     startTime: '5:00pm',
     description: 'This will be a fun, informative event. You should join us!',
@@ -28,7 +29,8 @@ const seedInPersonForm = [
   {
     plannerName: 'Shelly Fulton',
     name: 'Sushi & Sake',
-    location: 'Sushi Sumo',
+    location: '3005 Old Alabama Rd, Alpharetta, GA 30022',
+    // locationName: 'Sushi Sumo',
     startDate: 'Monday, June 13',
     startTime: '3:00pm',
     description: 'Tech talk & sushi!',
@@ -39,7 +41,8 @@ const seedInPersonForm = [
   {
     plannerName: 'Emily Rogers',
     name: 'Shakes & JavaScript',
-    location: 'Shake Shack',
+    location: '4400 Ashford Dunwoody Rd Suite 3025, Atlanta, GA 30346',
+    // locationName: 'Shake Shack',
     startDate: 'Saturday, June 25',
     startTime: '5:00pm',
     description: 'Shake it up at the Shake Shack',

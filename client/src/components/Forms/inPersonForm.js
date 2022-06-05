@@ -93,115 +93,210 @@ const InPersonForm = () => {
 
   return (
     <div>
-      <h3>In Person Event</h3>
+      {/* <h3>In Person Event</h3> */}
 
-      <form
-        className="flex-row justify-center justify-space-between-md align-center"
-        onSubmit={handleFormSubmit}
-      >
-        <div className="col-12">
-          <textarea
-            name="name"
-            placeholder="Event Name*"
-            value={formState.name}
-            className="form-input w-100"
-            style={{ lineHeight: '1.5' }}
-            onChange={handleChange}
-          ></textarea>
+      <form onSubmit={handleFormSubmit}>
+        <div id="questions">
+          <div id='aboutEvent'>
+            <h3>About Event</h3>
+            <div id="breakLine"></div>
+
+            {/* event name */}
+            <div id='inputLine'>
+              <div id='inputTitle'>
+                <h3>*</h3>
+                <h4>Event Name</h4>
+              </div>
+              <input
+                name="name"
+                value={formState.name}
+                id='inputBox'
+                style={{ lineHeight: '1.5' }}
+                onChange={handleChange}
+              ></input>
+            </div>
+
+            {/* event description */}
+            <div id='inputLine'>
+              <div id='inputTitle'>
+                <h3>*</h3>
+                <h4>Event Description</h4>
+              </div>
+              <textarea
+                name="description"
+                value={formState.description}
+                maxLength='300'
+                id='inputBox'
+                style={{ lineHeight: '1.5' }}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+          </div>
+
+
+
+          {/* date and time */}
+          <div id='aboutEvent'>
+            <h3>Date and Time</h3>
+            <div id="breakLine"></div>
+
+            <div id='smallBoxes'>
+              {/* start date */}
+              <div id='inputLine'>
+                <div id='inputTitle'>
+                  <h3>*</h3>
+                  <h4>Start Date</h4>
+                </div>
+                <input
+                  name="startDate"
+                  placeholder="June 06"
+                  value={formState.startDate}
+                  id="inputBox"
+                  onChange={handleChange}
+                />
+              </div>
+
+              {/* end date */}
+              <div id='inputLine'>
+                <div id='inputTitle'>
+
+                  <h4>End Date</h4>
+                </div>
+                <input
+                  name="endDate"
+                  placeholder="Leave blank unless more than one day."
+                  value={formState.endDate}
+                  id="inputBox"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div id='smallBoxes'>
+              {/* start time */}
+              <div id='inputLine'>
+                <div id='inputTitle'>
+                  <h3>*</h3>
+                  <h4>Start Time</h4>
+                </div>
+                <input
+                  name="startTime"
+                  placeholder="12:00pm"
+                  value={formState.startTime}
+                  id="inputBox"
+                  onChange={handleChange}
+                />
+              </div>
+
+              {/* end time */}
+              <div id='inputLine'>
+                <div id='inputTitle'>
+                  <h4>End Time</h4>
+                </div>
+                <input
+                  name="endTime"
+                  placeholder="12:00pm"
+                  value={formState.endTime}
+                  id="inputBox"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </div>
+
+
+          {/* location */}
+          <div id='aboutEvent'>
+            <h3>Location</h3>
+            <div id="breakLine"></div>
+
+            {/* address */}
+            <div id='inputLine'>
+              <div id='inputTitle'>
+                <h3>*</h3>
+                <h4>Address</h4>
+              </div>
+              <input
+                name="location"
+                placeholder='# Street, City, State Zip'
+                value={formState.location}
+                id='inputBox'
+                style={{ lineHeight: '1.5' }}
+                onChange={handleChange}
+              ></input>
+            </div>
+          </div>
+
+
+          {/* Contact */}
+          <div id='aboutEvent'>
+            <h3>Contact Information</h3>
+            <div id="breakLine"></div>
+
+            {/* name */}
+            <div id='inputLine'>
+              <div id='inputTitle'>
+                <h3>*</h3>
+                <h4>Name</h4>
+              </div>
+              <input
+                name="plannerName"
+                value={formState.plannerName}
+                id='inputBox'
+                style={{ lineHeight: '1.5' }}
+                onChange={handleChange}
+              ></input>
+            </div>
+
+            {/* email */}
+            <div id='inputLine'>
+              <div id='inputTitle'>
+                <h3>*</h3>
+                <h4>Email</h4>
+              </div>
+              <input
+                name="email"
+                value={formState.email}
+                id='inputBox'
+                style={{ lineHeight: '1.5' }}
+                onChange={handleChange}
+              ></input>
+            </div>
+
+            {/* phone */}
+            <div id='inputLine'>
+              <div id='inputTitle'>
+                <h4>Phone</h4>
+              </div>
+              <input
+                name="phone"
+                value={formState.phone}
+                id='inputBox'
+                style={{ lineHeight: '1.5' }}
+                onChange={handleChange}
+              ></input>
+            </div>
+
+            {/* linkedin */}
+            <div id='inputLine'>
+              <div id='inputTitle'>
+                <h4>LinkedIn</h4>
+              </div>
+              <input
+                name="linkedIn"
+                placeholder='https://www.linkedin.com/in/jane-doe-1/'
+                value={formState.linkedIn}
+                id='inputBox'
+                style={{ lineHeight: '1.5' }}
+                onChange={handleChange}
+              ></input>
+            </div>
+          </div>
         </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="location"
-            placeholder="Location address*"
-            value={formState.location}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="startDate"
-            placeholder="Start Date*"
-            value={formState.startDate}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="endDate"
-            placeholder="End Date"
-            value={formState.endDate}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="startTime"
-            placeholder="Start Time*"
-            value={formState.startTime}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="endTime"
-            placeholder="End Time"
-            value={formState.endTime}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="description"
-            placeholder="Event Description*"
-            value={formState.description}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="plannerName"
-            placeholder="Event Planner Name*"
-            value={formState.plannerName}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="email"
-            placeholder="Planner Email*"
-            value={formState.email}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="phone"
-            placeholder="Planner Phone Number"
-            value={formState.phone}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-9">
-          <input
-            name="linkedIn"
-            placeholder="Planner LinkedIn"
-            value={formState.linkedIn}
-            className="form-input w-100"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 col-lg-3">
-          <button className="btn btn-primary btn-block py-3" type="submit">
-            Create In Person Event
+
+        <div id='buttonHolder'>
+          <button id='submit' type="submit">
+            Submit
           </button>
         </div>
         {error && (

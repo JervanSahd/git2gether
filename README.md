@@ -39,6 +39,8 @@ https://www.figma.com/file/q8V791FwxFg9lXMXzvDt7i/Git-2gether
 - Mongoose
 - Express
 - React Google Maps (NPM Package)
+- React-Geocode (NPM Package)
+- Font Awesome Icons (NPM Package)
 
 ## Features
 - Info here

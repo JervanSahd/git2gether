@@ -59,6 +59,8 @@ function Event({ event }) {
   Geocode.fromAddress(location).then(
     (response) => {
       const { lat, lng } = response.results[0].geometry.location;
+      console.log(lat, lng);
+      const center = {
       //console.log(lat, lng);
       return const center = {
         lat: lat,
@@ -69,15 +71,24 @@ function Event({ event }) {
     },
     (error) => {
       console.error('invalid address');
-    }
+    },
   );
 
+
+  const center = {
+    lat: 33.753746,
+    lng: -84.38633,
+  };
+
+    }
+  );
 
 
   // const center = {
   //   lat: 33.753746,
   //   lng: -84.38633,
   // };
+
 
 
   const { isLoaded, loadError } = useLoadScript({

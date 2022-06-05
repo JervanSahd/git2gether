@@ -61,8 +61,6 @@ function Event({ event }) {
       const { lat, lng } = response.results[0].geometry.location;
       console.log(lat, lng);
       const center = {
-      //console.log(lat, lng);
-      return const center = {
         lat: lat,
         lng: lng,
       };

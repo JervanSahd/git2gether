@@ -80,17 +80,7 @@ function Event({ event }) {
     lng: -84.38633,
   };
 
-    }
-  );
-
-
-  // const center = {
-  //   lat: 33.753746,
-  //   lng: -84.38633,
-  // };
-
-
-
+  
   const { isLoaded, loadError } = useLoadScript({
     id: "google-map-script",
     googleMapsApiKey: "AIzaSyBsYeaeYql_I1Bj96IEerbAK4-hqc7tCkI",

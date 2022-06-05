@@ -9,7 +9,6 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPhoneSquare } from '@fortawesome/free-solid-svg-icons';
 
 
-
 function Event({ event }) {
 
   const { _id, startDate, endDate, startTime, endTime, name, description,
@@ -74,9 +73,11 @@ function Event({ event }) {
 
         <div id="planner">
           <p>Event Organizer: {plannerName}</p>
-          <a id='icons' href={emailAddress} target="_blank">{Email}</a>
-          <a id='icons' href={linkedIn} target="_blank">{Linkedin}</a>
-          <a id='icons' href={emailAddress} target="_blank">{Phone}</a>
+          <div id='iconBox'>
+            <a id='icons' href={emailAddress} target="_blank">{Email}</a>
+            <a id='icons' href={linkedIn} target="_blank">{Linkedin}</a>
+            <a id='icons' href={emailAddress} target="_blank">{Phone}</a>
+          </div>
         </div>
       </div>
     </div >

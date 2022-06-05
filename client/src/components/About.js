@@ -38,8 +38,8 @@ function About() {
 
       <div class="about-section">
         <div id='eventDate'>
-          <h2>The Tech Behind Git2gether</h2>
-          <div id='planner'>
+          <h2 id='tech'>The Tech Behind Git2gether</h2>
+          <div id='planner2'>
             <a href="https://github.com/JervanSahd/git2gether" target="_blank" id="repolink">Github Repository</a>
             <a href="https://github.com/JervanSahd/git2gether" target="_blank" id="repoIcon">{Repo}</a>
           </div>

@@ -2,7 +2,7 @@
 ## Overview
 Git2gether exists to connect, equip, and empower coding bootcamp graduates.
 
-Coding bootcamps are a viable career path for aspiring developers.  Graduates of these fast-paced, intensive courses become proficient in variety of essential technologies and skills to help the graduate become employer-ready.
+Coding bootcamps are a viable career path for aspiring developers.  Graduates of these fast-paced, intensive courses become proficient in a variety of essential technologies and skills to help the graduate become employer-ready.
 
 Upon graduation, many of these very developers are left wondering, “Now what?”  Finding work in this sector proves to be a challenge for many graduates.  Though, as many as 79% of bootcamp graduates say that they landed a job within six months of graduation.<sup>1</sup>
 
@@ -42,8 +42,12 @@ https://www.figma.com/file/q8V791FwxFg9lXMXzvDt7i/Git-2gether
 - React-Geocode (NPM Package)
 - Font Awesome Icons (NPM Package)
 
-## Features
-- Info here
+## Screenshots
+![Events](./client/src/assets/screenshots/events.png)
+
+![Create Event](./client/src/assets/screenshots/create-event.png)
+
+![About](./client/src/assets/screenshots/about.png)
 
 ## Links
 

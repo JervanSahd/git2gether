@@ -46,7 +46,7 @@ https://www.figma.com/file/q8V791FwxFg9lXMXzvDt7i/Git-2gether
 ## Links
 
 ### Application
-pending
+https://git2gether-events.herokuapp.com/
 
 ### Github Repository
 https://github.com/JervanSahd/git2gether
@@ -64,8 +64,7 @@ https://github.com/JervanSahd/git2gether
 
 - Gilreath, Barry - https://github.com/barrygilreath3
 
-- Snavely, Steve - 
-https://github.com/JervanSahd
+- Snavely, Steve - https://github.com/JervanSahd
 
 - Stewart, Seamona - https://github.com/Jaspertena
 

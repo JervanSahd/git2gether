@@ -86,8 +86,8 @@ nav li {
 }
 
 #eventCards {
-    width: 70%;
-    margin: 50px 15% 0 15%;
+    width: 74%;
+    margin: 50px 13% 0 13%;
     max-width: 1500px;
 }
 
@@ -123,6 +123,7 @@ nav li {
 h4 {
     margin: 0;
     font-weight: 500;
+    line-height: 1.2rem;
 }
 
 #eventTitle {
@@ -139,14 +140,16 @@ h4 {
 #titleLocation {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
     justify-content: space-between;
     margin: 0 0 5px 0;
 }
 
 #location {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: .5rem 0 .5rem 0;
 }
 
 p {
@@ -267,6 +270,99 @@ h4 {
     opacity: 1;
 }
 
+#questions {
+    background-color: var(--dark);
+    width: 74%;
+    margin: 5rem 13% 0 13%;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+form h4 {
+    width: fit-content;
+    font-weight: 500;
+}
+
+#inputLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 .5rem 0;
+}
+
+#inputTitle {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#inputBox {
+    width: 80%;
+}
+
+#aboutEvent {
+    width: 100%;
+    margin: 0 0 3rem 0;
+}
+
+#questions :nth-child(4) {
+    width: 100%;
+    margin: 0 0 1rem 0;
+}
+
+#aboutEvent :nth-child(4) {
+    margin: 0 0 0.5rem 0;
+}
+
+#aboutEvent h3 {
+    color: var(--accent);
+    margin: 0;
+}
+
+#smallBoxes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#smallBoxes #inputLine {
+    width: 50%;
+}
+
+#smallBoxes #inputBox {
+    width: 60%;
+}
+
+#smallBoxes #inputTitle {
+    width: 40%;
+}
+
+#buttonHolder {
+    width: 74%;
+    margin: 1.5rem 13% 5rem 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#submit {
+    color: var(--accent);
+    background: none;
+    border: 2px solid var(--accent);
+    border-radius: 100px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 8rem;
+}
+
+#submit:hover {
+    color: var(--background);
+    background: var(--accent);
+}
+
 @media only screen and (max-width: 1250px) {
     #eventCards {
         width: 90%;
@@ -329,6 +425,20 @@ h4 {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    #eventInfo {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #eventDate {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem 1rem 0 0;
+    }
+
 }
 
 @media only screen and (max-width: 630px) {
